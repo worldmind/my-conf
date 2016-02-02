@@ -1,0 +1,9 @@
+if [ ! -f ~/private/.ssh/git ]
+then
+    ~/bin/mnt
+fi
+
+/usr/bin/keychain $HOME/.ssh/git
+
+PATH=${PATH}:$HOME/gsutil
+

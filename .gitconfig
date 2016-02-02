@@ -1,16 +1,17 @@
 [user]
   name = Alexey Shrub
-  email = worldmind@mail.ru
+  email = ashrub@yandex.ru
 [color]
   ui = auto
 [alias]
-  l  = log --graph --full-history --pretty=format:'%C(yellow)%h%Creset%C(blue bold)%d%Creset %C(normal)%s %Creset%C(red bold)by %an %Creset%C(cyan)(%ar)%Creset'
-  ll = !git l --all
   st = status
   co = checkout
   cm = commit
-  ci = commit
   br = branch
   df = diff
   pom = push origin master
-  mersq = merge --squash
+[push]
+	default = simple
+
+[diff "utf16diff"]
+	textconv = "iconv -f utf-16 -t utf-8"
