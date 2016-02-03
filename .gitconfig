@@ -9,6 +9,7 @@
   cm = commit
   br = branch
   df = diff
+  dw = diff --word-diff
   pom = push origin master
 [push]
 	default = simple
