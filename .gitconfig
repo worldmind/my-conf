@@ -10,6 +10,7 @@
   br = branch
   df = diff
   dw = diff --word-diff
+  dc = diff --word-diff --word-diff-regex=.
   pom = push origin master
 [push]
 	default = simple
