@@ -3,7 +3,7 @@ then
     ~/bin/mnt
 fi
 
-/usr/bin/keychain $HOME/.ssh/git $HOME/.ssh/appfollow
+/usr/bin/keychain $HOME/.ssh/git
 
-PATH=${PATH}:$HOME/gsutil
+PATH=${PATH}:$HOME/bin
 
