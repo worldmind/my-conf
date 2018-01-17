@@ -1,3 +1,5 @@
+alias e='emacs'
+
 if [ ! -f ~/private/.ssh/git ]
 then
     ~/bin/mnt

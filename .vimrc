@@ -2,7 +2,7 @@ set nocompatible
 set showcmd
 set tabstop=4
 set shiftwidth=4
-" set expandtab
+set expandtab
 set imdisable
 set spelllang=en,ru
 set encoding=utf8 
