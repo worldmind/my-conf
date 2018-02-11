@@ -1,0 +1,9 @@
+aliases['e'] = 'emacs'
+aliases['g'] = 'git'
+$PATH.append('%s/bin' % $HOME)
+
+import os.path
+if not os.path.isfile('%s/private/.ssh/git' % $HOME):
+    ~/bin/mnt
+
+/usr/bin/keychain $HOME/.ssh/git

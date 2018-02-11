@@ -14,3 +14,5 @@
 (global-whitespace-mode 1)
 
 (global-set-key (kbd "C-l") 'goto-line)
+
+(setq python-shell-interpreter "/usr/bin/python3")
