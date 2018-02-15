@@ -4,6 +4,9 @@
 [color]
   ui = auto
 [alias]
+  s  = status
+  c  = commit
+  a  = add
   st = status
   co = checkout
   cm = commit
