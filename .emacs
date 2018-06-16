@@ -16,3 +16,12 @@
 (global-set-key (kbd "C-l") 'goto-line)
 
 (setq python-shell-interpreter "/usr/bin/python3")
+
+(defun set-paste ()
+  (interactive)
+  (electric-indent-mode 0)
+)
+(defun unset-paste ()
+  (interactive)
+  (electric-indent-mode 1)
+)
