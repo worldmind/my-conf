@@ -10,3 +10,5 @@ if not os.path.isfile('%s/private/.ssh/git' % $HOME):
 
 # workaround for https://github.com/xonsh/xonsh/issues/2603
 $XONSH_APPEND_NEWLINE=True
+
+xontrib load vox
