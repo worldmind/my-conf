@@ -1,5 +1,6 @@
 aliases['e'] = 'emacs'
 aliases['g'] = 'git'
+aliases['py'] = 'python3'
 $PATH.append('%s/bin' % $HOME)
 
 import os.path
@@ -10,5 +11,5 @@ if not os.path.isfile('%s/private/.ssh/git' % $HOME):
 
 xontrib load vox
 
-$PROJECT_DIRS = ["~/code"]
+$PROJECT_DIRS = ["~/projects"]
 xontrib load avox
