@@ -25,3 +25,5 @@
   (interactive)
   (electric-indent-mode 1)
 )
+
+(show-paren-mode 1)
