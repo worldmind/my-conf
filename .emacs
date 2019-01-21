@@ -15,6 +15,10 @@
 
 (global-set-key (kbd "C-l") 'goto-line)
 
+(show-paren-mode 1)
+
+(setq column-number-mode t)
+
 (setq python-shell-interpreter "/usr/bin/python3")
 
 (defun set-paste ()
@@ -25,5 +29,3 @@
   (interactive)
   (electric-indent-mode 1)
 )
-
-(show-paren-mode 1)
