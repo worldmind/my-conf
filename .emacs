@@ -29,5 +29,3 @@
   (interactive)
   (electric-indent-mode 1)
 )
-
-(setq tags-file-name "path/to/file")
