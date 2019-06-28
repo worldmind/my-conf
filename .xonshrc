@@ -1,15 +1,22 @@
-aliases['e'] = 'emacs'
+$PROMPT = '{env_name:{}} $ '
+
 aliases['g'] = 'git'
-aliases['py'] = 'python3'
-$PATH.append('%s/bin' % $HOME)
+aliases['e'] = 'emacs'
 
-import os.path
-if not os.path.isfile('%s/private/.ssh/git' % $HOME):
-    ~/bin/mnt
+import os
+local_bin = '{}/.local/bin'.format($HOME)
+if os.path.isdir(local_bin):
+	$PATH.append(local_bin)
 
-/usr/bin/keychain $HOME/.ssh/git
+$PYENV_ROOT = '%s/.pyenv' % $HOME
+$PATH.insert(0, '%s/bin' % $PYENV_ROOT)
 
 xontrib load vox
-
 $PROJECT_DIRS = ["~/projects"]
 xontrib load avox
+
+from pathlib import Path
+if Path(f"{$HOME}/bin/mnt").exists() and not Path(f"{$HOME}/private/.ssh/git").exists():
+    ~/bin/mnt
+
+# end
