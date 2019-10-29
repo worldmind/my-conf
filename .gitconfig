@@ -8,16 +8,19 @@
   c  = commit
   a  = add
   p  = push
-  st = status
+  forcepush = push --force-with-lease
   co = checkout
-  cm = commit
   br = branch
   df = diff
   dw = diff --word-diff
   dc = diff --word-diff --word-diff-regex=.
   pom = push origin master
+  rmremotetag = git push --delete origin
+  rmlocaltag = git tag -d
 [push]
 	default = simple
 
 [diff "utf16diff"]
 	textconv = "iconv -f utf-16 -t utf-8"
+[core]
+	excludesfile = /home/worldmind/.gitignore

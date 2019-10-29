@@ -1,1 +1,1 @@
-((nil . ((tags-file-name . "~/path/TAGS"))))
+((nil . ((tags-file-name . "~/TAGS"))))

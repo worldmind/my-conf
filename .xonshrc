@@ -15,6 +15,8 @@ xontrib load vox
 $PROJECT_DIRS = ["~/projects"]
 xontrib load avox
 
+xontrib load direnv
+
 from pathlib import Path
 if Path(f"{$HOME}/bin/mnt").exists() and not Path(f"{$HOME}/private/.ssh/git").exists():
     ~/bin/mnt
