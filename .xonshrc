@@ -6,16 +6,20 @@ aliases['e'] = 'emacs'
 import os
 local_bin = '{}/.local/bin'.format($HOME)
 if os.path.isdir(local_bin):
-	$PATH.append(local_bin)
+   $PATH.append(local_bin)
 
 $PYENV_ROOT = '%s/.pyenv' % $HOME
-$PATH.insert(0, '%s/bin' % $PYENV_ROOT)
+#$PATH.insert(0, '%s/bin' % $PYENV_ROOT)
 
 xontrib load vox
 $PROJECT_DIRS = ["~/projects"]
 xontrib load avox
 
 xontrib load direnv
+
+@events.vox_on_activate
+def post_activate(name, *args, **kwargs):
+    print('Generate TAGS file here')
 
 from pathlib import Path
 if Path(f"{$HOME}/bin/mnt").exists() and not Path(f"{$HOME}/private/.ssh/git").exists():
