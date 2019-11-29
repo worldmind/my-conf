@@ -1,12 +1,17 @@
+from pathlib import Path
+
 $PROMPT = '{env_name:{}} $ '
 
 aliases['g'] = 'git'
 aliases['e'] = 'emacs'
 
-import os
-local_bin = '{}/.local/bin'.format($HOME)
-if os.path.isdir(local_bin):
-   $PATH.append(local_bin)
+local_bin = Path(f"{$HOME}/.local/bin")
+if local_bin.exists():
+   $PATH.append(str(local_bin))
+
+cargo_bin = Path(f"{$HOME}/.cargo/bin")
+if cargo_bin.exists():
+   $PATH.append(str(cargo_bin))
 
 $PYENV_ROOT = '%s/.pyenv' % $HOME
 #$PATH.insert(0, '%s/bin' % $PYENV_ROOT)
@@ -21,7 +26,6 @@ xontrib load direnv
 def post_activate(name, *args, **kwargs):
     print('Generate TAGS file here')
 
-from pathlib import Path
 if Path(f"{$HOME}/bin/mnt").exists() and not Path(f"{$HOME}/private/.ssh/git").exists():
     ~/bin/mnt
 
