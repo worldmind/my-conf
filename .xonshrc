@@ -1,14 +1,21 @@
 aliases['e'] = 'emacs'
 aliases['g'] = 'git'
 $PATH.append('%s/bin' % $HOME)
+$PATH.append('%s/.local/bin' % $HOME)
 
 import os.path
 if not os.path.isfile('%s/private/.ssh/git' % $HOME):
-    ~/bin/mnt
+    encfs ~/.encfs ~/private/
 
 /usr/bin/keychain $HOME/.ssh/git
 
 xontrib load vox
 
-$PROJECT_DIRS = ["~/code"]
+$PROJECT_DIRS = ["~/projects"]
 xontrib load avox
+
+# pyenv
+$PYENV_ROOT = '%s/.pyenv' % $HOME
+$PATH.insert(0, '%s/bin' % $PYENV_ROOT)
+#pyenv init - > /tmp/pyenv
+#source-bash /tmp/pyenv > /dev/null
