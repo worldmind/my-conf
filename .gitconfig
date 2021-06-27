@@ -30,5 +30,5 @@
 	diffFilter = diff-highlight
 
 [core]
-	excludesfile = /home/worldmind/.gitignore
+	excludesfile = /home/worldmind/.gitignore.default
 

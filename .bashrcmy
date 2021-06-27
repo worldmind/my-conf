@@ -1,11 +1,6 @@
 alias e='emacs'
+alias g='git'
+alias lgk='/usr/bin/keychain $HOME/.ssh/git'
 
-if [ ! -f ~/private/.ssh/git ]
-then
-    ~/bin/mnt
-fi
-
-/usr/bin/keychain $HOME/.ssh/git
-
-PATH=${PATH}:$HOME/bin
+#PATH=${PATH}:$HOME/bin
 
